@@ -73,6 +73,8 @@ ch2f(<<"EU433">>, Ch) ->
 ch2f(Region, Ch)
         when Region == <<"US902">>; Region == <<"US902-PR">>; Region == <<"AU915">> ->
     ch2fi(Ch, {9233, 6});
+ch2f(<<"RU870">>, Ch) ->
+    ch2fi(Ch, {8689, 2});
 ch2f(<<"CN470">>, Ch) ->
     ch2fi(Ch, {5003, 2}).
 
@@ -211,6 +213,7 @@ freq_range(<<"AU915">>) -> {915, 928};
 freq_range(<<"CN470">>) -> {470, 510};
 freq_range(<<"AS923">>) -> {915, 928};
 freq_range(<<"KR920">>) -> {920, 923};
+freq_range(<<"RU870">>) -> {863, 870};
 freq_range(<<"IN865">>) -> {865, 867}.
 
 max_uplink_snr(DataRate) ->
