@@ -39,7 +39,7 @@ handle_get(Req, regions=Opts) ->
                 ]}
             end,
             [<<"EU868">>, <<"CN779">>, <<"EU433">>, <<"AS923">>, <<"CN470">>,
-            <<"KR920">>, <<"IN865">>, <<"US902">>, <<"US902-PR">>, <<"AU915">>]),
+            <<"KR920">>, <<"IN865">>, <<"US902">>, <<"US902-PR">>, <<"AU915">>, <<"RU870">>]),
     {jsx:encode(Regs), Req, Opts};
 handle_get(Req, networks=Opts) ->
     Nets =
